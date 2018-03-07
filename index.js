@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
 
 
     let user = message.mentions.users.first(); 
-    let reason = args.slice(1).join(' ');
+    let reason = args.slice(1).join('!');
     if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.reply("Você não pode usar esse comando!");
     if (message.mentions.roles.size <1) return message.reply("Mencione o Cargo");
 
