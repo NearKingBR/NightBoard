@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
-bot.login('NDIwNjk3NDQ1NjI2ODA2Mjcz.DYCcjQ.cBpEznRZFB31XNvbQ6-y0UbtfoI');
+client.login(process.env.BOT_TOKEN);
 
 exports.run = (client, message, args) => {
 
