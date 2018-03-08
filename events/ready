@@ -1,0 +1,4 @@
+exports.run = (client) => {
+      console.log(`Em funcionamento!!!! total de ${client.channels.size} Canais, em ${client.guilds.size} servers, um total de ${client.users.size} usuarios.`)
+
+}
