@@ -1,33 +1,39 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const fs = require('fs');
+
+
+
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {// crie uma pasta chamada events
+    let eventFunction = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+client.on(eventName, (...args) => eventFunction.run(client, ...args));
+  });
+});
+
+
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(config.prefix)) return;
+ 
+  let command = message.content.split(" ")[0];
+  command = command.slice(config.prefix.length);
+ 
+  let args = message.content.split(" ").slice(1);
+  //
+ 
+  try {        //aqui voco pode colocar qualquer nome (não esqueça de mudar o nome da pasta para o mesmo)
+    let commandFile = require(`./comandos/${command}.js`);
+    commandFile.run(client, message, args);
+  } catch (err) {
+  //  console.error(err);
+  }
+ 
+});
+
+
+
 bot.login(process.env.BOT_TOKEN);
 
-exports.run = (client, message, args) => {
-
-
-
-    let user = message.mentions.users.first(); 
-    let reason = args.slice(1).join(' ');
-    if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.reply("Você não pode usar esse comando!");
-    if (message.mentions.roles.size <1) return message.reply("Mencione o Cargo");
-
-    if (message.mentions.users.size < 1) return message.reply("Mencione alguem para eu dar o cargo!");
-    if (reason.length < 1) return message.reply('Diga o tempo em minutos para dar o cargo!');
-    if(message.guild.member(message.mentions.users.first()).highestRole.position >= message.member.highestRole.position){
-        message.reply("Este usuário tem um cargo maior que o seu!");
-    } else {
-
-            message.guild.members.get(message.mentions.users.first().id).addRole((message.mentions.roles.first().id));
-                setTimeout(function() {
-                    message.guild.members.get(message.mentions.users.first().id).removeRole((message.mentions.roles.first().id));
-                    message.channel.sendMessage("<@" + message.mentions.users.first().id + ">, O tempo do seu cargo acabou!");
-                },args[2] * 1000 * 60)
-                message.channel.send("<@" + message.mentions.users.first().id + "> ganhou o cargo "+ args[0] + ' por ' + args[2] + " minutos");
-
-        }
-
-
-
-
-
-  }
