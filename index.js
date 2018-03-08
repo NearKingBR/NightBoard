@@ -29,7 +29,8 @@ client.on("message", message => {
     let commandFile = require(`./comando/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-  //  console.error(err);
+    
+console.error(err);
   }
  
 });
@@ -37,4 +38,3 @@ client.on("message", message => {
 
 
 client.login(process.env.BOT_TOKEN);
-
