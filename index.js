@@ -25,7 +25,7 @@ client.on("message", message => {
   //
  
   try {        //aqui voco pode colocar qualquer nome (não esqueça de mudar o nome da pasta para o mesmo)
-    let commandFile = require(`./comandos/${command}.js`);
+    let commandFile = require(`./comando/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
   //  console.error(err);
