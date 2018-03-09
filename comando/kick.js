@@ -51,10 +51,7 @@ message.channel.sendMessage({  "embed": {
         "name": "🔨USUÁRIO KICKADO:",
         "value": ` **${nomeBanido}**`
       },
-      {
-        "name": "📅Conta criada em:",
-        "value": moment(criado).format('LL')
-      },
+     
       {
         "name": "🌟KICKADO POR:",
         "value": `__**${nomeStaff}**__`
