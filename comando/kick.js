@@ -32,10 +32,6 @@ moment.locale('pt-BR');
     const mensagem = "**Isso não teria acontecido se o " + message.mentions.users.first().username + " tivesse respeitado as regras!**"
 
 
-
-});
-}
-
 client.guilds.get(message.guild.id).members.get(message.mentions.users.first().id).kick()
 
 message.delete()
@@ -73,3 +69,5 @@ message.channel.sendMessage({  "embed": {
       }
     ]
   }
+});
+}
