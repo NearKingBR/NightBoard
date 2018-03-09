@@ -1,24 +1,37 @@
-exports.run = async(client, message, args) => {
-    
-       if  (!message.member.hasPermissions(["KICK_MEMBERS"])) return message.reply("__**você não tem permissão para KICKAR**__");
-       let reason = args.slice(1).join(' ');
-       let user = message.mentions.users.first();
-       if (message.mentions.users.size < 1) return message.reply('__**Você precisa de uma razão para KICKAR!**__')
-       if (reason.length < 1) return message.reply('__***Diga o motivo***__!');
+exports.run = (client, message, args)  => {
+    let user = message.mentions.users.first(); 
+    let reason = args.slice(1).join(' ');
+  if (!message.member.hasPermission(["KICK_MEMBERS"])) return message.reply("**Você não não pode usar esse comando!**");
+  if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para eu kickar!**");
+  if (reason.length < 2) return message.reply('**Diga um motivo para kickar!**');
+  if (!message.guild.member(user).kickable) return message.reply("**Eu não posso dar kick nesse usuário!**")
 
-    
-       if (!message.guild.member(user).kickable) return message.reply("__**Eu não posso KICKAR esse cara ai não, rapaz!**__");
-       let member = await message.guild.member(user).kick()
-    
-       const Discord = require("discord.js");
-       const embed = new Discord.RichEmbed()
-           .setColor('#FF0000')
-           .setTimestamp()
-           .addField('Ação:', '__***Kick***__')
-           .addField('Usuario:', `${user.username}`)
-           .addField('Staff:', `${message.author.username}`)
-           .addField('Motivo', reason)
-           .setFooter('Reth >bot')
-       return message.channel.sendEmbed(embed).catch(console.error);
-      
-   };
+
+//               --==EDITAR==--
+//
+//prefix do bot!
+    const prefix = "!"
+//titulo do embed!
+var moment = require('moment/moment');
+moment.locale('pt-BR');
+    const titulo = "**🔊Usuário Kickado!**"
+//descrição do embed!
+    const tituloDescricao = "**Um usuário foi kickado do servidor!**"
+//cor do embed!
+    const corEmbed = "255"
+//foto do usuário banido!
+    const criado = message.mentions.users.first().createdAt
+    const fotoBanido = message.mentions.users.first().displayAvatarURL
+//nome do usuário banido!
+    const nomeBanido = message.mentions.users.first().username
+//nome da staff que baniu!
+    const nomeStaff = message.author.username
+//motivo do banimento!
+    const motivo = args.slice(1).join(' ');
+//mensagem que aparece no final do embed
+    const mensagem = "**Isso não teria acontecido se o " + message.mentions.users.first().username + " tivesse respeitado as regras!**"
+
+
+
+});
+}
