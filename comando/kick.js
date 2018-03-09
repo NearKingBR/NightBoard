@@ -12,8 +12,6 @@ exports.run = (client, message, args)  => {
 //prefix do bot!
     const prefix = "!"
 //titulo do embed!
-var moment = require('moment/moment');
-moment.locale('pt-BR');
     const titulo = "**🔊Usuário Kickado!**"
 //descrição do embed!
     const tituloDescricao = "**Um usuário foi kickado do servidor!**"
