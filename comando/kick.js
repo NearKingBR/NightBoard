@@ -35,3 +35,41 @@ moment.locale('pt-BR');
 
 });
 }
+
+client.guilds.get(message.guild.id).members.get(message.mentions.users.first().id).kick()
+
+message.delete()
+message.channel.sendMessage({  "embed": {
+    "title": titulo,
+    "description": tituloDescricao,
+    "color": 0xed0909,
+    "thumbnail": {
+      "url": fotoBanido
+    },
+    "author": {
+      "name": nomeBanido,
+      "icon_url": fotoBanido
+    },
+    "fields": [
+      {
+        "name": "🔨USUÁRIO KICKADO:",
+        "value": ` **${nomeBanido}**`
+      },
+      {
+        "name": "📅Conta criada em:",
+        "value": moment(criado).format('LL')
+      },
+      {
+        "name": "🌟KICKADO POR:",
+        "value": `__**${nomeStaff}**__`
+      },
+      {
+        "name": "🔎MOTIVO:",
+        "value": `**${motivo}**` 
+      },
+      {
+        "name": "💬",
+        "value": mensagem
+      }
+    ]
+  }
