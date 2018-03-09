@@ -4,7 +4,7 @@ exports.run = async(client, message, args) => {
        let reason = args.slice(1).join(' ');
        let user = message.mentions.users.first();
        if (message.mentions.users.size < 1) return message.reply('__**Você precisa de uma razão para KICKAR!**__')
-       if (reason.length < 1) return message.reply('__***Dia o motivo***__!');
+       if (reason.length < 1) return message.reply('__***Diga o motivo***__!');
 
     
        if (!message.guild.member(user).kickable) return message.reply("__**Eu não posso KICKAR esse cara ai não, rapaz!**__");
