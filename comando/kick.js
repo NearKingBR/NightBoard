@@ -1,6 +1,5 @@
 exports.run = async(client, message, args) => {
     
-       if(message.author.id !== 401414281763094549)
        if  (!message.member.hasPermissions(["KICK_MEMBERS"])) return message.reply("__**você não tem permissão para KICKAR**__");
        let reason = args.slice(1).join(' ');
        let user = message.mentions.users.first();
