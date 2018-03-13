@@ -29,10 +29,6 @@ client.on("message", message => {
  
   try {        //aqui voco pode colocar qualquer nome (não esqueça de mudar o nome da pasta para o mesmo)
     let commandFile = require(`./comando/${command}.js`);
-    const viadinho = "401414281763094549"
-    const ownerID = "282504900552949760"
-    if(message.author.id !== ownerID)
-    if(message.author.id !== viadinho)
     commandFile.run(client, message, args);
   } catch (err) {
     
