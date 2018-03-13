@@ -3,7 +3,8 @@ const db = require('quick.db')
 
   
 exports.run = (client, message, args)  => {
-    
+        if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.reply("**Você não pode usar esse comando!**");
+
     var user = message.mentions.users.first()
     let reason1 = args.slice(2).join(' ');
     if (message.mentions.roles.size <1) return message.reply("**Mencione o Cargo**");
