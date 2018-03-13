@@ -9,6 +9,24 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "array": "^0.4.3",
+    "cleverbot-node": "^0.3.11",
+    "dataformat": "^1.0.0",
+    "dateformat": "^3.0.2",
+    "discord-eco": "0.0.10",
+    "discord.js": "^11.3.0",
+    "embed": "0.0.1",
+    "filter": "^0.1.1",
+    "format": "^0.2.2",
+    "func": "^0.1.0",
+    "function": "^0.6.1",
+    "match": "^1.2.8",
+    "moment": "^2.19.2",
+    "ms": "^2.1.1",
+    "quick.db": "^3.0.2",
+    "sqlite": "^2.8.0",
+    "switch": "0.0.0",
+    "ytdl-core": "^0.18.2"
   }
 }
+
