@@ -1,19 +1,17 @@
 const db = require('quick.db')
 
-exports.run = (bot, message, args, func) => {
+exports.run = (client, message, args, func) => {
 
-    // Return Statements
-    if (!message.member.roles.find('name', 'js')) return func.embed(message.channel, '**esse comando requer o cargo js**', 120000) // This returns if it CANT find the owner role on them. It then uses the function to send to message.channel, and deletes the message after 120000 milliseconds (2minutes)
-    if (!message.mentions.channels.first() && args.join(" ").toUpperCase() !== 'NONE') return func.embed(message.channel, '**Mencione um canal**\n > *r!canal #canal*') // This returns if they don't message a channel, but we also want it to continue running if they want to disable the log
+    
+      if (!message.mentions.channels.first() && args.join(" ").toUpperCase() !== 'NONE') return message.channel.send('**Mecione o canal**\n > *r!canal #canal*') // This returns if they don't message a channel, but we also want it to continue running if they want to disable the log
 
     // Fetch the new channel they mentioned
     let newChannel;
     if (args.join(" ").toUpperCase() === 'NONE') newChannel = ''; // If they wrote the word none, it sets newChannel as empty.
-    else newChannel = message.mentions.channels.first().id; // If they actually mentioned a channel, it will set newChannel as that.
+    else newChannel = message.mentions.channels.first().id; 
 
     // Update Channel
     db.updateText(`messageChannel_${message.guild.id}`, newChannel).then(i => {
-        func.embed(message.channel, `**O canal foi selecionado com sucesso ${message.mentions.channels.first()}**`) // Finally, send in chat that they updated the channel.
+      message.channel.send( `**Canal selecionado ${message.mentions.channels.first()}**`) 
     })
-
-} // Lets set the DM channel now, we can use this code we just wrote as a template.
+}
