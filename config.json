@@ -1,12 +1,12 @@
 {
    "guildID": "360414190772682767",
     "ownerID": "401414281763094549",
-    "prefix": "."
+    "prefix": ".",
 	 "servers": [
 		"360414190772682767",
 	],
 	"roleName": "[VIP]",
 	"colors": 12,
 	"speed": 60000,
-	"logging": true
+	"logging": true,
 }
