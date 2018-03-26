@@ -53,3 +53,4 @@ client.on('ready', () => {
   if(config.speed < 60000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
   setInterval(changeColor, config.speed);
 });
+client.login(process.env.BOT_TOKEN);
