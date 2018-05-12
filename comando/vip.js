@@ -93,7 +93,7 @@ client.channels.get(i.text).send({embed: embed})
 })
     setTimeout(() => {
 message.guild.members.get(message.mentions.users.first().id).removeRole((message.mentions.roles.first().id));
-message.channel.send("O tempo do" + user + " acabou!" )
+message.channel.send("O tempo do " + user + " acabou!" )
 
 }, temporeal)}
 
