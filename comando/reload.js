@@ -1,8 +1,8 @@
 exports.run = (client, message, args) => {
     
  
-    const r = "282504900552949760"
-    const n = "401414281763094549"
+    const r = "235075700262961152"
+    const n = "235075700262961152"
 
         let reason = args.slice(0).join(' ');
     
