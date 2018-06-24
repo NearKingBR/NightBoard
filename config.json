@@ -8,7 +8,7 @@
 		 "421292330189062149"
 	],
 	"roleName": "cor",
-	"colors": 32,
-	"speed": 65000,
+	"colors": 64,
+	"speed": 60000,
 	"logging": true
 }
