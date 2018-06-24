@@ -4,8 +4,8 @@ const db = require('quick.db')
   
 exports.run = (client, message, args)  => {
   
-      const q = "401414281763094549"
-    const ownerID = "282504900552949760"
+      const q = "235075700262961152"
+    const ownerID = "235075700262961152"
     if(message.author.id !== ownerID)
     if(message.author.id !== q)
         if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.reply("**Você não pode usar esse comando!**");
