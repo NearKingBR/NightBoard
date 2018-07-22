@@ -7,6 +7,10 @@ const db = require('quick.db');
 const size    = config.colors;
 const rainbow = new Array(size);
 
+client.on("guildMemberAdd", member => {
+member.guild.members.get(member.user.id).sendMessage("PORCARIA DA MENSAGEM")
+})
+
 for (var i=0; i<size; i++) {
   var red   = sin_to_hex(i, 0 * Math.PI * 2/3); // 0   deg
   var blue  = sin_to_hex(i, 1 * Math.PI * 2/3); // 120 deg
