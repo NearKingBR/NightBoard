@@ -7,7 +7,7 @@ const db = require('quick.db');
 const size    = config.colors;
 const rainbow = new Array(size);
 client.on("guildMemberAdd", member => {
-member.guild.members.get(member.user.id).sendMessage("Oiee nenem, tudo bem? Entra no Discord Crazy-Life, Super recomendo, la rola muita safadeza e uns nudes :smiling_imp::smiling_imp::heart_eyes::heart:️ https://discord.gg/KRNw3BH")
+member.guild.members.get(member.user.id).sendMessage("Oiee nenem, tudo bem? Entra no Discord Crazy-Life, Super recomendo, la rola muita safadeza e uns nudes :smiling_imp::smiling_imp::heart_eyes::heart:️ https://discord.gg/G3uAH5j")
 })
 
 fs.readdir("./events/", (err, files) => {
