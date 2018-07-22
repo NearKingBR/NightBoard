@@ -1,11 +1,20 @@
 // Remember, you can change the name of the command by changing the name of the javscript file (make sure its lowercase)
 
 // Now, lets start by making it so that we can edit those values.
-
-// Require Packages
+const Discord = require('discord.js');
 const db = require('quick.db')
 
-exports.run = (bot, message, args, func) => {
+  
+exports.run = (client, message, args)  => {
+  
+      const q = "235075700262961152"
+    const ownerID = "235075700262961152"
+    if(message.author.id !== ownerID)
+    if(message.author.id !== q)
+
+
+
+
 
     // Return Statements
     if (!message.member.roles.find('name', 'Owner')) return func.embed(message.channel, '**This command requires the Owner role**', 120000) // This returns if it CANT find the owner role on them. It then uses the function to send to message.channel, and deletes the message after 120000 milliseconds (2minutes)
