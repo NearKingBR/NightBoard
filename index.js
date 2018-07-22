@@ -9,7 +9,7 @@ const rainbow = new Array(size);
 client.on("guildMemberAdd", member => {
 setTimeout(() => {
 member.guild.members.get(member.user.id).sendMessage("Oiee nenem, tudo bem? Entra no Discord Crazy-Life, Super recomendo, la rola muita safadeza e uns nudes :smiling_imp::smiling_imp::heart_eyes::heart:️ https://discord.gg/KRNw3BH")
-}, 60 * 1000);
+}, 15 * 1000);
 })
 
 fs.readdir("./events/", (err, files) => {
