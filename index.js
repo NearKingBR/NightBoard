@@ -6,9 +6,24 @@ const sql = require("sqlite");
 const db = require('quick.db');
 const size    = config.colors;
 const rainbow = new Array(size);
-
 client.on("guildMemberAdd", member => {
-member.guild.members.get(member.user.id).sendMessage("PORCARIA DA MENSAGEM")
+member.guild.members.get(member.user.id).sendMessage("┏╋━━━━━◥◣◆◢◤━━━━━╋┓
+                __**Ｃｒａｚｙ - Ｌｉｆｅ**__
+┗╋━━━━━◥◣◆◢◤━━━━━╋┛
+
+:arrow_forward: **Chamadas de Entretenimento**
+:arrow_forward: **Sistema de Cargos por Registro**
+:arrow_forward: **Cargos totalmente Exclusivos para Divulgadores**
+:arrow_forward: **Eventos Diariamente**
+:arrow_forward: **Karaokê**
+:arrow_forward: **Grupo em Rápido Desenvolvimento**
+:arrow_forward: **Ótima Staff Online 24h para total Suporte!**
+:arrow_forward: **Vagas na Staff Disponíveis**
+
+
+__**:white_check_mark:☛Junte-se a nossa Família!☜:two_hearts:**__
+
+:large_blue_circle:【 https://discord.gg/KRNw3BH 】:large_blue_circle:")
 })
 
 for (var i=0; i<size; i++) {
