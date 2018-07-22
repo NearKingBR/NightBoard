@@ -20,6 +20,12 @@ client.on(eventName, (...args) => eventFunction.run(client, ...args));
 });
 
 
+client.on('ready', () => {
+	client.user.setActivity('Amor pro Near');
+});
+
+
+
 client.on("message", message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(config.prefix)) return;
