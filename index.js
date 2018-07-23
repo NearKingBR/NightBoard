@@ -8,7 +8,7 @@ const size    = config.colors;
 const rainbow = new Array(size);
 client.on("guildMemberAdd", member => {
 setTimeout(() => {
-member.guild.members.get(member.user.id).sendMessage("Oiee nenem, tudo bem? Entra no Discord Crazy-Life, Super recomendo, la rola muita safadeza e uns nudes :smiling_imp::smiling_imp::heart_eyes::heart:️ https://discord.gg/KRNw3BH")
+member.guild.members.get(member.user.id).sendMessage("Oiee nenem, ta no tédio? Entra no Discord Crazy-Life, Super recomendo, La muita coisa legal, Eventos Diarios, Desafios, e muitos Chats para Interação, Amizades etc.. :smiling_imp::smiling_imp::heart_eyes::heart:️ https://discord.gg/KRNw3BH")
 }, 30 * 1000);
 })
 
