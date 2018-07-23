@@ -23,7 +23,7 @@ client.on(eventName, (...args) => eventFunction.run(client, ...args));
 
 
 client.on('ready', () => {
-	client.user.setActivity('amor pro Near` , 'https://www.twitch.tv/monstercat');
+	client.user.setActivity(`amor pro Near` , 'https://www.twitch.tv/monstercat');
 
 });
 
